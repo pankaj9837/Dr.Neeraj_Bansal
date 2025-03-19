@@ -89,7 +89,7 @@ app.post("/", async (req, res) => {
   }
 
   const { aesKeyBuffer, initialVectorBuffer, decryptedBody } = decryptedRequest;
-  console.log("💬 Decrypted Request:", decryptedBody);
+  // console.log("💬 Decrypted Request:", decryptedBody);
 
   // TODO: Uncomment this block and add your flow token validation logic.
   // If the flow token becomes invalid, return HTTP code 427 to disable the flow and show the message in `error_msg` to the user
@@ -109,7 +109,7 @@ app.post("/", async (req, res) => {
   */
 
   const screenResponse = await getNextScreen(decryptedBody);
-  console.log("👉 Response to Encrypt:", screenResponse);
+  // console.log("👉 Response to Encrypt:", screenResponse);
 
   res.send(encryptResponse(screenResponse, aesKeyBuffer, initialVectorBuffer));
 });
