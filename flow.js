@@ -151,7 +151,7 @@ const SCREEN_RESPONSES = {
 
     const getdata=async(search)=>{
         let res=await axios.get(`https://api.duniyatech.com/WhatsApp-cloud-api/fatch_date_and_time/${search}`)
-        console.log(res.data)
+        // console.log(res.data)
         return res.data
     }
    
@@ -167,7 +167,7 @@ const SCREEN_RESPONSES = {
   
     // handle error notification
     if (data?.error) {
-      console.warn("Received client error:", data);
+      // console.warn("Received client error:", data);
       return {      
         data: {
           acknowledged: true,
